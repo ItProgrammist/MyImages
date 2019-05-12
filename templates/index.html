@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="UTF=8">
+<head>
+	<title>Book shop</title>
+    <style>
+         .header p {
+             color: white;
+         }
+         .header a{
+             font-size: 20px;
+             color: papayawhip;
+             text-decoration: none;
+             margin-left: 850px;
+         }
+         .header{
+    	    font-size: 70px;
+            margin-top: -70px;
+            margin-left: -7px;
+            background: #111111;
+            border-radius: 15px;
+             .r li{
+                 font-size: 220px;
+             }
+
+    }
+    </style>
+</head>
+<body>
+<div class="header">
+    <p>Book shop</p>
+</div>
+    <div>
+        <a href = "http://127.0.0.1:8000/categories/">category</a>
+    </div>
+    {{  text }}
+    <div class="r">
+    {% for category in categories %}
+        <a>{{ category.name }}</a><br>
+    {% endfor %}
+    </div>
+</body>
+</html>
