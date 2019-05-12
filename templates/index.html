@@ -2,37 +2,63 @@
 <html lang="UTF=8">
 <head>
 	<title>Book shop</title>
+    <link rel="shortcut icon" href="book-icon.png" type="png">
     <style>
-         .header p {
-             color: white;
-         }
-         .header a{
-             font-size: 20px;
-             color: papayawhip;
-             text-decoration: none;
-             margin-left: 850px;
-         }
-         .header{
-    	    font-size: 70px;
-            margin-top: -70px;
-            margin-left: -7px;
-            background: #111111;
-            border-radius: 15px;
-             .r li{
-                 font-size: 220px;
-             }
+         body{
+	margin: 0;
+	height: 100%;
+	background: #ffeed4;
+}
 
-    }
+.Header p{
+	font-size: 65px;
+	margin-top: 10px;
+	color: #bec5b9;
+}
+
+.Header{
+	background: #273526;
+	margin-top: -10px;
+
+}
+
+.section{
+	font-size: 75px;
+	font-family: Cambria;
+	border: solid black 1px;
+	border-radius: 60px;
+}
+
+.Books{
+	font-size: 70px;
+	margin-left: 390px;
+	text-decoration: underline;
+	text-decoration-color: #273526;
+}
+
+.Categories{
+	font-size: 70px;
+	margin-left: 1200px;
+	margin-top: -150px;
+	text-decoration: underline;
+	text-decoration-color: #273526;
+}
+.r{
+    margin-left: 1250px;
+    font-size: 25px ;
+}
     </style>
 </head>
 <body>
-<div class="header">
-    <p>Book shop</p>
+<div class="Header">
+	<i><p>Cool Books</p></i>
 </div>
-    <div>
-        <a href = "http://127.0.0.1:8000/categories/">category</a>
-    </div>
-    {{  text }}
+	<div class="Section">
+	<p class="section" align="center">Sections</p>
+	<i><p class="Books">Books</p></i>
+        <a href = "http://127.0.0.1:8000/categories/"><i><p class="Categories">Categories</p></i></a>
+	</div>
+</body>
     <div class="r">
     {% for category in categories %}
         <a>{{ category.name }}</a><br>
