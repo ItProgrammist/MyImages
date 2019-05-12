@@ -9,7 +9,7 @@ def show_books(request):
     result = ''
 
     for book in books:
-        result += f'<a href = "http://127.0.0.1:8000/books/{book.id}/">{book.name}</a>'
+        result += f'<a href = "/books/{book.id}/">{book.name}</a>'
     return HttpResponse(result)
 
 def show_book_detail(request, book_id):

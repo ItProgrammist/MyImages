@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="UTF=8">
 <head>
+    <link rel="shortcut icon" href="C:\Users\user\PycharmProjects\BookShops\book-icon.png" type="png">
 	<title>Book shop</title>
-    <link rel="shortcut icon" href="book-icon.png" type="png">
     <style>
          body{
 	margin: 0;
@@ -38,14 +38,27 @@
 
 .Categories{
 	font-size: 70px;
-	margin-left: 1200px;
+	margin-left: 1280px;
 	margin-top: -150px;
 	text-decoration: underline;
 	text-decoration-color: #273526;
 }
-.r{
-    margin-left: 1250px;
-    font-size: 25px ;
+.right{
+    font-size: 25px;
+    width: 50%;
+    float: right;
+    text-align: center;
+
+}
+.left{
+    font-size: 25px;
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+.img{
+    height: 300px;
+    width: 300px;
 }
     </style>
 </head>
@@ -53,16 +66,25 @@
 <div class="Header">
 	<i><p>Cool Books</p></i>
 </div>
-	<div class="Section">
+	    <div class="Section">
 	<p class="section" align="center">Sections</p>
-	<i><p class="Books">Books</p></i>
-        <a href = "http://127.0.0.1:8000/categories/"><i><p class="Categories">Categories</p></i></a>
-	</div>
+        <a href="http://127.0.0.1:8001/books/"><i><p class="Books">Books</p></i></a>
+        <a href = "http://127.0.0.1:8001/categories/"><i><p class="Categories">Categories</p></i></a>
+	    </div>
 </body>
-    <div class="r">
-    {% for category in categories %}
-        <a>{{ category.name }}</a><br>
-    {% endfor %}
+<div class="left">
+        {% for book in books %}
+            <div>
+            <h2>{{ book.name }}</h2>
+            <img src="{{ book.img }}" class="img"><br>
+            {{ book.description }}
+            </div>
+        {% endfor %}
+</div>
+    <div class="right">
+        {% for category in categories %}
+            <a>{{ category.name }}</a><br>
+        {% endfor %}
     </div>
 </body>
 </html>

@@ -12,4 +12,4 @@ class Book(models.Model):
         related_name='books',
         on_delete=models.CASCADE,
     )
-
+    img = models.CharField(max_length=100)

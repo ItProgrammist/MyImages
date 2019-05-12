@@ -14,7 +14,7 @@ def show_main_page(request):
         'text': 'Categories',
         'categories': categories,
         'books': books,})
-
+    print(categories, books)
     return HttpResponse(result)
 
 
